@@ -1,0 +1,2090 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Aaba Elegance - Discover timeless fashion, elegant collections, and premium styles."
+    />
+
+    <title>Aaba Elegance</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- Tailwind Theme -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              heading: ["Playfair Display", "serif"],
+              body: ["Inter", "sans-serif"],
+            },
+
+            colors: {
+              primary: "#111111",
+              secondary: "#6B7280",
+              accent: "#C7A66A",
+              light: "#FAF8F4",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body
+    class="bg-white text-primary font-body antialiased selection:bg-black selection:text-white"
+  >
+    <!-- ===================================================== -->
+    <!-- Paste all sections below in order                     -->
+    <!-- ===================================================== -->
+
+    <main>
+      <!-- 01 Navbar -->
+      <!-- ================= NAVBAR ================= -->
+
+      <nav
+        id="navbar"
+        class="fixed top-0 left-0 w-full z-50 transition-all duration-500"
+      >
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <div
+            id="navContainer"
+            class="flex justify-between items-center py-6 transition-all duration-500"
+          >
+            <!-- Logo -->
+
+            <a
+              href="#"
+              class="font-heading text-3xl font-semibold tracking-[0.35em] text-white"
+            >
+              AABA
+            </a>
+
+            <!-- Desktop Menu -->
+
+            <div class="hidden lg:flex items-center gap-10">
+              <a
+                href="#collections"
+                class="text-white text-sm uppercase tracking-[0.18em] hover:text-amber-300 transition"
+              >
+                Collections
+              </a>
+
+              <a
+                href="#about"
+                class="text-white text-sm uppercase tracking-[0.18em] hover:text-amber-300 transition"
+              >
+                About
+              </a>
+
+              <a
+                href="#instagram"
+                class="text-white text-sm uppercase tracking-[0.18em] hover:text-amber-300 transition"
+              >
+                Instagram
+              </a>
+
+              <a
+                href="#reviews"
+                class="text-white text-sm uppercase tracking-[0.18em] hover:text-amber-300 transition"
+              >
+                Reviews
+              </a>
+
+              <a
+                href="#contact"
+                class="text-white text-sm uppercase tracking-[0.18em] hover:text-amber-300 transition"
+              >
+                Contact
+              </a>
+            </div>
+
+            <!-- Desktop Button -->
+
+            <a
+              href="#contact"
+              class="hidden lg:inline-flex px-6 py-3 rounded-full bg-white text-black text-sm font-semibold hover:bg-amber-200 transition"
+            >
+              Shop Now
+            </a>
+
+            <!-- Mobile -->
+
+            <button id="menuButton" class="lg:hidden text-white text-2xl">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+
+      <div
+        id="mobileMenu"
+        class="fixed inset-0 bg-black/95 backdrop-blur-xl z-40 hidden"
+      >
+        <div class="flex flex-col items-center justify-center h-full gap-10">
+          <a href="#collections" class="text-white text-2xl">Collections</a>
+
+          <a href="#about" class="text-white text-2xl">About</a>
+
+          <a href="#instagram" class="text-white text-2xl">Instagram</a>
+
+          <a href="#reviews" class="text-white text-2xl">Reviews</a>
+
+          <a href="#contact" class="text-white text-2xl">Contact</a>
+        </div>
+      </div>
+
+      <script>
+        const navbar = document.getElementById("navbar");
+
+        const navContainer = document.getElementById("navContainer");
+
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        const menuButton = document.getElementById("menuButton");
+
+        menuButton.onclick = () => {
+          mobileMenu.classList.toggle("hidden");
+        };
+
+        mobileMenu.querySelectorAll("a").forEach((link) => {
+          link.onclick = () => mobileMenu.classList.add("hidden");
+        });
+
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 40) {
+            navbar.classList.add("bg-white/80");
+
+            navbar.classList.add("backdrop-blur-xl");
+
+            navbar.classList.add("shadow");
+
+            navContainer.classList.remove("py-6");
+
+            navContainer.classList.add("py-4");
+
+            navbar.querySelectorAll("a").forEach((a) => {
+              a.classList.remove("text-white");
+
+              a.classList.add("text-zinc-900");
+            });
+
+            menuButton.classList.remove("text-white");
+
+            menuButton.classList.add("text-zinc-900");
+          } else {
+            navbar.classList.remove("bg-white/80");
+
+            navbar.classList.remove("backdrop-blur-xl");
+
+            navbar.classList.remove("shadow");
+
+            navContainer.classList.remove("py-4");
+
+            navContainer.classList.add("py-6");
+
+            navbar.querySelectorAll("a").forEach((a) => {
+              a.classList.remove("text-zinc-900");
+
+              a.classList.add("text-white");
+            });
+
+            menuButton.classList.remove("text-zinc-900");
+
+            menuButton.classList.add("text-white");
+          }
+        });
+      </script>
+
+      <!-- 02 Hero -->
+
+      <!-- ================= HERO ================= -->
+
+<section
+    class="relative h-screen min-h-[750px] overflow-hidden">
+
+    <!-- Background -->
+
+    <img
+        src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1800&q=80"
+        alt="Fashion"
+        class="absolute inset-0 w-full h-full object-cover scale-110"
+        id="heroImage">
+
+    <!-- Overlay -->
+
+    <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/35 to-black/20"></div>
+
+    <!-- Content -->
+
+    <div
+        class="relative z-20 h-full max-w-7xl mx-auto px-6 lg:px-12 flex items-center">
+
+        <div class="max-w-2xl">
+
+            <p
+                class="uppercase tracking-[0.4em] text-sm text-amber-300 mb-6">
+
+                EST. 2024
+
+            </p>
+
+            <h1
+                class="font-heading text-white text-5xl md:text-7xl xl:text-8xl leading-tight">
+
+                Timeless
+
+                <br>
+
+                Elegance
+
+            </h1>
+
+            <p
+                class="text-zinc-200 text-lg md:text-xl mt-8 leading-8 max-w-xl">
+
+                Designed for women who appreciate effortless style,
+                premium craftsmanship and confidence in every outfit.
+
+            </p>
+
+            <div
+                class="flex flex-wrap gap-5 mt-12">
+
+                <a href="#collections"
+
+                    class="px-8 py-4 bg-white text-black rounded-full font-semibold hover:bg-amber-300 transition duration-300">
+
+                    Explore Collection
+
+                </a>
+
+                <a href="#instagram"
+
+                    class="px-8 py-4 border border-white text-white rounded-full hover:bg-white hover:text-black transition duration-300">
+
+                    Visit Instagram
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Floating Card -->
+
+    <div
+        class="hidden lg:block absolute bottom-14 right-14 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl px-8 py-7 text-white shadow-2xl">
+
+        <p class="text-5xl font-heading">
+
+            100+
+
+        </p>
+
+        <p class="uppercase tracking-[0.25em] text-xs mt-2 text-zinc-300">
+
+            New Arrivals
+
+        </p>
+
+    </div>
+
+    <!-- Scroll Indicator -->
+
+    <div
+        class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white flex flex-col items-center">
+
+        <span
+            class="uppercase tracking-[0.3em] text-xs mb-3">
+
+            Scroll
+
+        </span>
+
+        <div
+            class="w-6 h-10 border border-white rounded-full flex justify-center">
+
+            <div
+                id="scrollDot"
+                class="w-1.5 h-1.5 bg-white rounded-full mt-2">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+
+const heroImage=document.getElementById("heroImage");
+
+window.addEventListener("scroll",()=>{
+
+const y=window.pageYOffset;
+
+heroImage.style.transform=`translateY(${y*0.25}px) scale(1.12)`;
+
+});
+
+let dot=0;
+
+setInterval(()=>{
+
+const scrollDot=document.getElementById("scrollDot");
+
+dot=(dot+1)%18;
+
+scrollDot.style.transform=`translateY(${dot}px)`;
+
+},60);
+
+</script>
+
+      <!-- 03 Featured Collections -->
+
+      <!-- ================= FEATURED COLLECTIONS ================= -->
+
+<section id="collections" class="py-24 lg:py-36 bg-stone-50">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+        <!-- Heading -->
+
+        <div class="text-center max-w-3xl mx-auto">
+
+            <p class="uppercase tracking-[0.35em] text-amber-700 text-sm font-semibold">
+
+                Featured Collections
+
+            </p>
+
+            <h2 class="font-heading text-5xl md:text-6xl mt-5 text-zinc-900">
+
+                Curated for Every Occasion
+
+            </h2>
+
+            <p class="mt-8 text-zinc-600 leading-8 text-lg">
+
+                Discover elegant outfits designed to make every moment feel special—from everyday sophistication to festive celebrations.
+
+            </p>
+
+        </div>
+
+        <!-- Collections -->
+
+        <div class="grid lg:grid-cols-2 gap-8 mt-20">
+
+            <!-- Card -->
+
+            <div class="group relative rounded-3xl overflow-hidden shadow-xl">
+
+                <img
+                    src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1400&q=80"
+                    class="w-full h-[650px] object-cover transition duration-700 group-hover:scale-110">
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+
+                <div class="absolute bottom-10 left-10">
+
+                    <span class="bg-white/20 backdrop-blur-lg px-4 py-2 rounded-full text-white text-sm">
+
+                        Everyday Wear
+
+                    </span>
+
+                    <h3 class="text-4xl font-heading text-white mt-6">
+
+                        Effortless Elegance
+
+                    </h3>
+
+                    <p class="text-zinc-200 mt-4 max-w-sm">
+
+                        Modern silhouettes crafted for everyday confidence.
+
+                    </p>
+
+                    <button
+                        class="mt-8 bg-white text-black px-7 py-3 rounded-full font-semibold hover:bg-amber-300 transition">
+
+                        Explore →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Right Side -->
+
+            <div class="grid gap-8">
+
+                <!-- Card -->
+
+                <div class="group relative rounded-3xl overflow-hidden shadow-xl">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1400&q=80"
+                        class="w-full h-[310px] object-cover transition duration-700 group-hover:scale-110">
+
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
+
+                    <div class="absolute left-8 top-1/2 -translate-y-1/2">
+
+                        <span class="text-amber-300 uppercase tracking-[0.25em] text-sm">
+
+                            New
+
+                        </span>
+
+                        <h3 class="text-3xl font-heading text-white mt-3">
+
+                            Party Collection
+
+                        </h3>
+
+                        <button
+                            class="mt-6 text-white border border-white rounded-full px-6 py-3 hover:bg-white hover:text-black transition">
+
+                            View Collection
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Card -->
+
+                <div class="group relative rounded-3xl overflow-hidden shadow-xl">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1495385794356-15371f348c31?auto=format&fit=crop&w=1400&q=80"
+                        class="w-full h-[310px] object-cover transition duration-700 group-hover:scale-110">
+
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
+
+                    <div class="absolute left-8 top-1/2 -translate-y-1/2">
+
+                        <span class="text-amber-300 uppercase tracking-[0.25em] text-sm">
+
+                            Trending
+
+                        </span>
+
+                        <h3 class="text-3xl font-heading text-white mt-3">
+
+                            Festive Styles
+
+                        </h3>
+
+                        <button
+                            class="mt-6 text-white border border-white rounded-full px-6 py-3 hover:bg-white hover:text-black transition">
+
+                            Discover
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Bottom Stats -->
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mt-24">
+
+            <div class="text-center">
+
+                <h3 class="text-5xl font-heading text-zinc-900">
+
+                    500+
+
+                </h3>
+
+                <p class="mt-3 text-zinc-500">
+
+                    Happy Customers
+
+                </p>
+
+            </div>
+
+            <div class="text-center">
+
+                <h3 class="text-5xl font-heading text-zinc-900">
+
+                    100+
+
+                </h3>
+
+                <p class="mt-3 text-zinc-500">
+
+                    New Designs
+
+                </p>
+
+            </div>
+
+            <div class="text-center">
+
+                <h3 class="text-5xl font-heading text-zinc-900">
+
+                    4.9★
+
+                </h3>
+
+                <p class="mt-3 text-zinc-500">
+
+                    Customer Rating
+
+                </p>
+
+            </div>
+
+            <div class="text-center">
+
+                <h3 class="text-5xl font-heading text-zinc-900">
+
+                    Daily
+
+                </h3>
+
+                <p class="mt-3 text-zinc-500">
+
+                    Instagram Updates
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+      <!-- 04 About -->
+
+      <!-- ================= ABOUT AABA ELEGANCE ================= -->
+
+<section id="about" class="bg-white py-28 lg:py-36">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+
+            <!-- Left -->
+
+            <div class="relative">
+
+                <img
+                    src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1400&q=80"
+                    class="rounded-3xl w-full h-[700px] object-cover shadow-2xl">
+
+                <!-- Floating Quote -->
+
+                <div
+                    class="absolute -bottom-8 -right-8 bg-white rounded-3xl shadow-2xl p-8 max-w-xs">
+
+                    <p class="italic text-zinc-600 leading-7">
+
+                        “True elegance is not about being noticed.
+                        It's about being remembered.”
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Right -->
+
+            <div>
+
+                <p class="uppercase tracking-[0.35em] text-amber-700 font-semibold text-sm">
+
+                    Our Story
+
+                </p>
+
+                <h2 class="font-heading text-5xl lg:text-6xl mt-5 text-zinc-900 leading-tight">
+
+                    Fashion that feels
+                    as beautiful as
+                    it looks.
+
+                </h2>
+
+                <p class="mt-10 text-zinc-600 text-lg leading-9">
+
+                    At <strong>Aaba Elegance</strong>, we believe clothing is more than
+                    fabric—it is confidence, personality, and self-expression.
+
+                </p>
+
+                <p class="mt-6 text-zinc-600 text-lg leading-9">
+
+                    Every collection is thoughtfully curated to combine timeless
+                    elegance with modern trends, helping women feel confident
+                    whether they're dressing for everyday moments or life's
+                    biggest celebrations.
+
+                </p>
+
+                <p class="mt-6 text-zinc-600 text-lg leading-9">
+
+                    Our growing Instagram community inspires everything we do,
+                    allowing us to stay connected with the latest styles while
+                    remaining true to quality, comfort, and sophistication.
+
+                </p>
+
+                <!-- Features -->
+
+                <div class="grid grid-cols-2 gap-8 mt-14">
+
+                    <div>
+
+                        <div class="text-4xl mb-3">
+
+                            ✨
+
+                        </div>
+
+                        <h4 class="font-semibold text-lg">
+
+                            Curated Collections
+
+                        </h4>
+
+                        <p class="text-zinc-500 mt-2">
+
+                            Carefully selected styles for every occasion.
+
+                        </p>
+
+                    </div>
+
+                    <div>
+
+                        <div class="text-4xl mb-3">
+
+                            🌿
+
+                        </div>
+
+                        <h4 class="font-semibold text-lg">
+
+                            Premium Fabrics
+
+                        </h4>
+
+                        <p class="text-zinc-500 mt-2">
+
+                            Comfortable materials designed for lasting elegance.
+
+                        </p>
+
+                    </div>
+
+                    <div>
+
+                        <div class="text-4xl mb-3">
+
+                            💖
+
+                        </div>
+
+                        <h4 class="font-semibold text-lg">
+
+                            Customer First
+
+                        </h4>
+
+                        <p class="text-zinc-500 mt-2">
+
+                            Personalized assistance for every customer.
+
+                        </p>
+
+                    </div>
+
+                    <div>
+
+                        <div class="text-4xl mb-3">
+
+                            📸
+
+                        </div>
+
+                        <h4 class="font-semibold text-lg">
+
+                            Instagram Inspired
+
+                        </h4>
+
+                        <p class="text-zinc-500 mt-2">
+
+                            Fresh arrivals and styling inspiration shared regularly.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Brand Values -->
+
+        <div class="grid md:grid-cols-3 gap-10 mt-32">
+
+            <div class="rounded-3xl bg-stone-50 p-10 hover:shadow-xl transition duration-300">
+
+                <div class="text-5xl mb-5">
+
+                    🤍
+
+                </div>
+
+                <h3 class="font-heading text-3xl">
+
+                    Elegance
+
+                </h3>
+
+                <p class="text-zinc-600 mt-5 leading-8">
+
+                    Timeless styles that never go out of fashion.
+
+                </p>
+
+            </div>
+
+            <div class="rounded-3xl bg-stone-50 p-10 hover:shadow-xl transition duration-300">
+
+                <div class="text-5xl mb-5">
+
+                    🌸
+
+                </div>
+
+                <h3 class="font-heading text-3xl">
+
+                    Confidence
+
+                </h3>
+
+                <p class="text-zinc-600 mt-5 leading-8">
+
+                    Outfits designed to make every woman feel her best.
+
+                </p>
+
+            </div>
+
+            <div class="rounded-3xl bg-stone-50 p-10 hover:shadow-xl transition duration-300">
+
+                <div class="text-5xl mb-5">
+
+                    ⭐
+
+                </div>
+
+                <h3 class="font-heading text-3xl">
+
+                    Quality
+
+                </h3>
+
+                <p class="text-zinc-600 mt-5 leading-8">
+
+                    Carefully chosen fabrics and finishing in every collection.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+      <!-- 05 New Arrivals -->
+
+      <!-- ================= INSTAGRAM LOOKBOOK ================= -->
+
+<section id="instagram" class="bg-stone-100 py-28 lg:py-36">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+        <!-- Heading -->
+
+        <div class="text-center max-w-3xl mx-auto">
+
+            <p class="uppercase tracking-[0.35em] text-amber-700 text-sm font-semibold">
+
+                Follow Our Journey
+
+            </p>
+
+            <h2 class="font-heading text-5xl lg:text-6xl mt-5 text-zinc-900">
+
+                Styled by Aaba Elegance
+
+            </h2>
+
+            <p class="mt-8 text-lg leading-8 text-zinc-600">
+
+                Every outfit tells a story. Explore our latest arrivals, customer favorites,
+                and everyday fashion inspiration on Instagram.
+
+            </p>
+
+        </div>
+
+        <!-- Gallery -->
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-20">
+
+            <!-- Image -->
+
+            <a href="https://instagram.com/aaba_elegance"
+
+                target="_blank"
+
+                class="group relative overflow-hidden rounded-3xl">
+
+                <img
+
+                    src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80"
+
+                    class="w-full h-[380px] object-cover duration-700 group-hover:scale-110">
+
+                <div
+
+                    class="absolute inset-0 bg-black/0 group-hover:bg-black/40 duration-500 flex items-center justify-center">
+
+                    <i
+
+                        class="fa-brands fa-instagram text-white text-4xl opacity-0 group-hover:opacity-100 duration-500">
+
+                    </i>
+
+                </div>
+
+            </a>
+
+            <a href="https://instagram.com/aaba_elegance"
+
+                target="_blank"
+
+                class="group relative overflow-hidden rounded-3xl">
+
+                <img
+
+                    src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"
+
+                    class="w-full h-[520px] object-cover duration-700 group-hover:scale-110">
+
+                <div
+
+                    class="absolute inset-0 bg-black/0 group-hover:bg-black/40 duration-500 flex items-center justify-center">
+
+                    <i
+
+                        class="fa-brands fa-instagram text-white text-4xl opacity-0 group-hover:opacity-100 duration-500">
+
+                    </i>
+
+                </div>
+
+            </a>
+
+            <a href="https://instagram.com/aaba_elegance"
+
+                target="_blank"
+
+                class="group relative overflow-hidden rounded-3xl">
+
+                <img
+
+                    src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80"
+
+                    class="w-full h-[380px] object-cover duration-700 group-hover:scale-110">
+
+                <div
+
+                    class="absolute inset-0 bg-black/0 group-hover:bg-black/40 duration-500 flex items-center justify-center">
+
+                    <i
+
+                        class="fa-brands fa-instagram text-white text-4xl opacity-0 group-hover:opacity-100 duration-500">
+
+                    </i>
+
+                </div>
+
+            </a>
+
+            <a href="https://instagram.com/aaba_elegance"
+
+                target="_blank"
+
+                class="group relative overflow-hidden rounded-3xl">
+
+                <img
+
+                    src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80"
+
+                    class="w-full h-[520px] object-cover duration-700 group-hover:scale-110">
+
+                <div
+
+                    class="absolute inset-0 bg-black/0 group-hover:bg-black/40 duration-500 flex items-center justify-center">
+
+                    <i
+
+                        class="fa-brands fa-instagram text-white text-4xl opacity-0 group-hover:opacity-100 duration-500">
+
+                    </i>
+
+                </div>
+
+            </a>
+
+            <a href="https://instagram.com/aaba_elegance"
+
+                target="_blank"
+
+                class="group relative overflow-hidden rounded-3xl">
+
+                <img
+
+                    src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80"
+
+                    class="w-full h-[520px] object-cover duration-700 group-hover:scale-110">
+
+                <div
+
+                    class="absolute inset-0 bg-black/0 group-hover:bg-black/40 duration-500 flex items-center justify-center">
+
+                    <i
+
+                        class="fa-brands fa-instagram text-white text-4xl opacity-0 group-hover:opacity-100 duration-500">
+
+                    </i>
+
+                </div>
+
+            </a>
+
+            <a href="https://instagram.com/aaba_elegance"
+
+                target="_blank"
+
+                class="group relative overflow-hidden rounded-3xl">
+
+                <img
+
+                    src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80"
+
+                    class="w-full h-[380px] object-cover duration-700 group-hover:scale-110">
+
+                <div
+
+                    class="absolute inset-0 bg-black/0 group-hover:bg-black/40 duration-500 flex items-center justify-center">
+
+                    <i
+
+                        class="fa-brands fa-instagram text-white text-4xl opacity-0 group-hover:opacity-100 duration-500">
+
+                    </i>
+
+                </div>
+
+            </a>
+
+            <a href="https://instagram.com/aaba_elegance"
+
+                target="_blank"
+
+                class="group relative overflow-hidden rounded-3xl">
+
+                <img
+
+                    src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+
+                    class="w-full h-[380px] object-cover duration-700 group-hover:scale-110">
+
+                <div
+
+                    class="absolute inset-0 bg-black/0 group-hover:bg-black/40 duration-500 flex items-center justify-center">
+
+                    <i
+
+                        class="fa-brands fa-instagram text-white text-4xl opacity-0 group-hover:opacity-100 duration-500">
+
+                    </i>
+
+                </div>
+
+            </a>
+
+            <a href="https://instagram.com/aaba_elegance"
+
+                target="_blank"
+
+                class="group relative overflow-hidden rounded-3xl">
+
+                <img
+
+                    src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=900&q=80"
+
+                    class="w-full h-[520px] object-cover duration-700 group-hover:scale-110">
+
+                <div
+
+                    class="absolute inset-0 bg-black/0 group-hover:bg-black/40 duration-500 flex items-center justify-center">
+
+                    <i
+
+                        class="fa-brands fa-instagram text-white text-4xl opacity-0 group-hover:opacity-100 duration-500">
+
+                    </i>
+
+                </div>
+
+            </a>
+
+        </div>
+
+        <!-- CTA -->
+
+        <div class="text-center mt-20">
+
+            <p class="text-zinc-600 text-lg">
+
+                New arrivals, styling ideas, behind-the-scenes moments, and customer stories are shared regularly.
+
+            </p>
+
+            <a
+
+                href="https://instagram.com/aaba_elegance"
+
+                target="_blank"
+
+                class="inline-flex items-center gap-3 mt-8 bg-black text-white px-8 py-4 rounded-full hover:bg-zinc-800 transition">
+
+                <i class="fa-brands fa-instagram text-xl"></i>
+
+                Follow @aaba_elegance
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+      <!-- 06 Why Choose Us -->
+
+      <!-- ================= WHY CHOOSE US ================= -->
+
+<section class="bg-white py-28 lg:py-36">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+        <div class="text-center max-w-3xl mx-auto">
+
+            <p class="uppercase tracking-[0.35em] text-amber-700 text-sm font-semibold">
+
+                Why Choose Us
+
+            </p>
+
+            <h2 class="font-heading text-5xl lg:text-6xl mt-5 text-zinc-900">
+
+                Fashion With Purpose
+
+            </h2>
+
+            <p class="mt-8 text-lg text-zinc-600 leading-8">
+
+                Every collection is selected with attention to quality, comfort, and timeless style—because great fashion should feel as good as it looks.
+
+            </p>
+
+        </div>
+
+        <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-8 mt-20">
+
+            <div class="bg-stone-50 rounded-3xl p-10 hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+
+                <div class="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center text-2xl">
+
+                    ✨
+
+                </div>
+
+                <h3 class="font-heading text-2xl mt-8">
+
+                    Premium Quality
+
+                </h3>
+
+                <p class="text-zinc-600 mt-5 leading-8">
+
+                    Carefully selected fabrics and excellent finishing for a refined look.
+
+                </p>
+
+            </div>
+
+            <div class="bg-stone-50 rounded-3xl p-10 hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+
+                <div class="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center text-2xl">
+
+                    ❤️
+
+                </div>
+
+                <h3 class="font-heading text-2xl mt-8">
+
+                    Personalized Service
+
+                </h3>
+
+                <p class="text-zinc-600 mt-5 leading-8">
+
+                    We help you choose outfits that suit your style and occasion.
+
+                </p>
+
+            </div>
+
+            <div class="bg-stone-50 rounded-3xl p-10 hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+
+                <div class="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center text-2xl">
+
+                    🚚
+
+                </div>
+
+                <h3 class="font-heading text-2xl mt-8">
+
+                    Reliable Delivery
+
+                </h3>
+
+                <p class="text-zinc-600 mt-5 leading-8">
+
+                    Your favorite styles delivered with care and attention.
+
+                </p>
+
+            </div>
+
+            <div class="bg-stone-50 rounded-3xl p-10 hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+
+                <div class="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center text-2xl">
+
+                    📸
+
+                </div>
+
+                <h3 class="font-heading text-2xl mt-8">
+
+                    Instagram First
+
+                </h3>
+
+                <p class="text-zinc-600 mt-5 leading-8">
+
+                    Stay updated with fresh arrivals, styling inspiration, and customer favorites.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+      <!-- 07 Instagram Gallery -->
+
+      <!-- ================= BEST SELLERS ================= -->
+
+<section id="bestsellers" class="py-28 lg:py-36 bg-white">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+        <div class="flex flex-col lg:flex-row justify-between items-end gap-10">
+
+            <div>
+
+                <p class="uppercase tracking-[0.35em] text-amber-700 text-sm font-semibold">
+
+                    Best Sellers
+
+                </p>
+
+                <h2 class="font-heading text-5xl lg:text-6xl mt-4 text-zinc-900">
+
+                    Loved by Our Customers
+
+                </h2>
+
+            </div>
+
+            <a href="#contact"
+                class="border border-zinc-900 rounded-full px-7 py-3 hover:bg-zinc-900 hover:text-white transition">
+
+                Enquire Now
+
+            </a>
+
+        </div>
+
+        <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-8 mt-20">
+
+            <!-- Product -->
+
+            <div class="group">
+
+                <div class="relative overflow-hidden rounded-3xl bg-stone-100">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80"
+                        class="w-full h-[450px] object-cover duration-700 group-hover:scale-110">
+
+                    <span
+                        class="absolute top-5 left-5 bg-white px-4 py-2 rounded-full text-xs font-semibold">
+
+                        NEW
+
+                    </span>
+
+                </div>
+
+                <div class="mt-6">
+
+                    <h3 class="font-semibold text-xl">
+
+                        Floral Elegance
+
+                    </h3>
+
+                    <p class="text-zinc-500 mt-2">
+
+                        Casual Collection
+
+                    </p>
+
+                    <button
+                        class="mt-6 w-full rounded-full bg-black text-white py-3 hover:bg-zinc-800 transition">
+
+                        Enquire on WhatsApp
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Product -->
+
+            <div class="group">
+
+                <div class="relative overflow-hidden rounded-3xl bg-stone-100">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1495385794356-15371f348c31?auto=format&fit=crop&w=900&q=80"
+                        class="w-full h-[450px] object-cover duration-700 group-hover:scale-110">
+
+                    <span
+                        class="absolute top-5 left-5 bg-amber-600 text-white px-4 py-2 rounded-full text-xs">
+
+                        TRENDING
+
+                    </span>
+
+                </div>
+
+                <div class="mt-6">
+
+                    <h3 class="font-semibold text-xl">
+
+                        Evening Grace
+
+                    </h3>
+
+                    <p class="text-zinc-500 mt-2">
+
+                        Party Wear
+
+                    </p>
+
+                    <button
+                        class="mt-6 w-full rounded-full bg-black text-white py-3 hover:bg-zinc-800 transition">
+
+                        Enquire on WhatsApp
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Product -->
+
+            <div class="group">
+
+                <div class="relative overflow-hidden rounded-3xl bg-stone-100">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+                        class="w-full h-[450px] object-cover duration-700 group-hover:scale-110">
+
+                </div>
+
+                <div class="mt-6">
+
+                    <h3 class="font-semibold text-xl">
+
+                        Everyday Chic
+
+                    </h3>
+
+                    <p class="text-zinc-500 mt-2">
+
+                        Office Wear
+
+                    </p>
+
+                    <button
+                        class="mt-6 w-full rounded-full bg-black text-white py-3 hover:bg-zinc-800 transition">
+
+                        Enquire on WhatsApp
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Product -->
+
+            <div class="group">
+
+                <div class="relative overflow-hidden rounded-3xl bg-stone-100">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=900&q=80"
+                        class="w-full h-[450px] object-cover duration-700 group-hover:scale-110">
+
+                </div>
+
+                <div class="mt-6">
+
+                    <h3 class="font-semibold text-xl">
+
+                        Celebration Collection
+
+                    </h3>
+
+                    <p class="text-zinc-500 mt-2">
+
+                        Festive Wear
+
+                    </p>
+
+                    <button
+                        class="mt-6 w-full rounded-full bg-black text-white py-3 hover:bg-zinc-800 transition">
+
+                        Enquire on WhatsApp
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+      <!-- 08 Testimonials -->
+
+      <!-- ================= CONTACT ================= -->
+
+<section id="contact" class="bg-zinc-950 text-white py-28 lg:py-36">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+
+            <!-- Left -->
+
+            <div>
+
+                <p class="uppercase tracking-[0.35em] text-amber-400 text-sm font-semibold">
+
+                    Let's Connect
+
+                </p>
+
+                <h2 class="font-heading text-5xl lg:text-6xl mt-5 leading-tight">
+
+                    We'd Love To
+                    Style You.
+
+                </h2>
+
+                <p class="mt-8 text-zinc-300 text-lg leading-8">
+
+                    Looking for a particular outfit? Have questions about sizes,
+                    colours or availability? Send us your requirement and we'll
+                    get back to you on WhatsApp.
+
+                </p>
+
+                <div class="space-y-6 mt-14">
+
+                    <div class="flex items-center gap-5">
+
+                        <div class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                        </div>
+
+                        <div>
+
+                            <p class="text-zinc-400 text-sm">
+
+                                WhatsApp
+
+                            </p>
+
+                            <p class="text-lg">
+
+                                +91 XXXXX XXXXX
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="flex items-center gap-5">
+
+                        <div class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center">
+
+                            <i class="fa-brands fa-instagram"></i>
+
+                        </div>
+
+                        <div>
+
+                            <p class="text-zinc-400 text-sm">
+
+                                Instagram
+
+                            </p>
+
+                            <p class="text-lg">
+
+                                @aaba_elegance
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Form -->
+
+            <div class="bg-white rounded-3xl p-8 lg:p-10 text-zinc-900 shadow-2xl">
+
+                <form id="whatsappForm" class="space-y-6">
+
+                    <div>
+
+                        <label class="block mb-2 font-medium">
+
+                            Name
+
+                        </label>
+
+                        <input
+                            id="name"
+                            required
+                            type="text"
+                            placeholder="Your Name"
+                            class="w-full border rounded-xl px-5 py-4 outline-none focus:ring-2 focus:ring-amber-500">
+
+                    </div>
+
+                    <div>
+
+                        <label class="block mb-2 font-medium">
+
+                            Phone Number
+
+                        </label>
+
+                        <input
+                            id="phone"
+                            required
+                            pattern="[0-9]{10}"
+                            maxlength="10"
+                            type="tel"
+                            placeholder="10-digit mobile number"
+                            class="w-full border rounded-xl px-5 py-4 outline-none focus:ring-2 focus:ring-amber-500">
+
+                    </div>
+
+                    <div>
+
+                        <label class="block mb-2 font-medium">
+
+                            Requirement
+
+                        </label>
+
+                        <textarea
+                            id="requirement"
+                            required
+                            rows="5"
+                            placeholder="Tell us what you're looking for..."
+                            class="w-full border rounded-xl px-5 py-4 outline-none focus:ring-2 focus:ring-amber-500 resize-none"></textarea>
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="w-full bg-black text-white rounded-xl py-4 font-semibold hover:bg-zinc-800 transition">
+
+                        Send on WhatsApp
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+
+document.getElementById("whatsappForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+
+    const phone = document.getElementById("phone").value.trim();
+
+    const requirement = document.getElementById("requirement").value.trim();
+
+    if(phone.length !== 10){
+
+        alert("Please enter a valid 10-digit mobile number.");
+
+        return;
+
+    }
+
+    const businessNumber = "919744305807";
+
+    const message =
+`Hello Aaba Elegance,
+
+Name: ${name}
+
+Phone: ${phone}
+
+Requirement:
+${requirement}`;
+
+    window.open(
+        `https://wa.me/${businessNumber}?text=${encodeURIComponent(message)}`,
+        "_blank"
+    );
+
+});
+
+</script>
+
+      <!-- 09 FAQ -->
+
+      <!-- ================= FINAL BRAND CTA ================= -->
+
+<section class="relative overflow-hidden">
+
+    <!-- Background -->
+
+    <img
+        src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1800&q=80"
+        class="absolute inset-0 w-full h-full object-cover">
+
+    <div class="absolute inset-0 bg-black/65"></div>
+
+    <!-- Content -->
+
+    <div class="relative max-w-5xl mx-auto px-6 py-36 text-center text-white">
+
+        <p class="uppercase tracking-[0.45em] text-amber-300 text-sm font-semibold">
+
+            Aaba Elegance
+
+        </p>
+
+        <h2 class="font-heading text-5xl lg:text-7xl mt-8 leading-tight">
+
+            Fashion isn't about
+            following trends.
+
+            <br>
+
+            It's about expressing
+            who you are.
+
+        </h2>
+
+        <p class="mt-10 text-zinc-200 text-lg max-w-2xl mx-auto leading-9">
+
+            Discover collections that celebrate confidence,
+            individuality, and timeless elegance.
+
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-5 mt-14">
+
+            <a href="#collections"
+                class="px-9 py-4 rounded-full bg-white text-black font-semibold hover:bg-amber-300 transition">
+
+                Explore Collection
+
+            </a>
+
+            <a href="#contact"
+                class="px-9 py-4 rounded-full border border-white hover:bg-white hover:text-black transition">
+
+                Contact Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+      <!-- 10 Contact -->
+
+      <!-- ================= FAQ ================= -->
+
+<section id="faq" class="bg-stone-50 py-28 lg:py-36">
+
+    <div class="max-w-4xl mx-auto px-6">
+
+        <div class="text-center mb-16">
+
+            <p class="uppercase tracking-[0.35em] text-amber-700 text-sm font-semibold">
+
+                Frequently Asked Questions
+
+            </p>
+
+            <h2 class="font-heading text-5xl lg:text-6xl mt-5 text-zinc-900">
+
+                Need Some Answers?
+
+            </h2>
+
+            <p class="mt-6 text-zinc-600 text-lg leading-8">
+
+                Here are answers to some of the questions we receive most often.
+
+            </p>
+
+        </div>
+
+        <div class="space-y-5">
+
+            <!-- Item -->
+
+            <div class="faq-item rounded-2xl bg-white shadow-sm overflow-hidden">
+
+                <button class="faq-btn w-full flex justify-between items-center text-left px-8 py-6">
+
+                    <span class="font-semibold text-lg">
+
+                        How can I place an order?
+
+                    </span>
+
+                    <i class="fa-solid fa-plus transition-transform"></i>
+
+                </button>
+
+                <div class="faq-content hidden px-8 pb-6 text-zinc-600 leading-8">
+
+                    Simply send us a message on WhatsApp or Instagram with the product you're interested in. We'll guide you through availability, payment, and delivery.
+
+                </div>
+
+            </div>
+
+            <!-- Item -->
+
+            <div class="faq-item rounded-2xl bg-white shadow-sm overflow-hidden">
+
+                <button class="faq-btn w-full flex justify-between items-center text-left px-8 py-6">
+
+                    <span class="font-semibold text-lg">
+
+                        Do you offer home delivery?
+
+                    </span>
+
+                    <i class="fa-solid fa-plus transition-transform"></i>
+
+                </button>
+
+                <div class="faq-content hidden px-8 pb-6 text-zinc-600 leading-8">
+
+                    Yes. Delivery options depend on your location. Contact us for delivery charges and estimated timelines.
+
+                </div>
+
+            </div>
+
+            <!-- Item -->
+
+            <div class="faq-item rounded-2xl bg-white shadow-sm overflow-hidden">
+
+                <button class="faq-btn w-full flex justify-between items-center text-left px-8 py-6">
+
+                    <span class="font-semibold text-lg">
+
+                        Can I check size and availability before ordering?
+
+                    </span>
+
+                    <i class="fa-solid fa-plus transition-transform"></i>
+
+                </button>
+
+                <div class="faq-content hidden px-8 pb-6 text-zinc-600 leading-8">
+
+                    Absolutely. We'll share available sizes, colours, measurements, and additional photos if needed.
+
+                </div>
+
+            </div>
+
+            <!-- Item -->
+
+            <div class="faq-item rounded-2xl bg-white shadow-sm overflow-hidden">
+
+                <button class="faq-btn w-full flex justify-between items-center text-left px-8 py-6">
+
+                    <span class="font-semibold text-lg">
+
+                        How can I contact Aaba Elegance?
+
+                    </span>
+
+                    <i class="fa-solid fa-plus transition-transform"></i>
+
+                </button>
+
+                <div class="faq-content hidden px-8 pb-6 text-zinc-600 leading-8">
+
+                    The quickest way is through WhatsApp or Instagram. We usually respond as soon as possible during business hours.
+
+                </div>
+
+            </div>
+
+            <!-- Item -->
+
+            <div class="faq-item rounded-2xl bg-white shadow-sm overflow-hidden">
+
+                <button class="faq-btn w-full flex justify-between items-center text-left px-8 py-6">
+
+                    <span class="font-semibold text-lg">
+
+                        Can I visit your store?
+
+                    </span>
+
+                    <i class="fa-solid fa-plus transition-transform"></i>
+
+                </button>
+
+                <div class="faq-content hidden px-8 pb-6 text-zinc-600 leading-8">
+
+                    If you have a physical store or showroom, add the address here. Otherwise, you can replace this answer with details about online ordering or appointments.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+
+document.querySelectorAll(".faq-btn").forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const item = button.parentElement;
+        const content = item.querySelector(".faq-content");
+        const icon = button.querySelector("i");
+
+        document.querySelectorAll(".faq-item").forEach(other => {
+
+            if (other !== item) {
+
+                other.querySelector(".faq-content").classList.add("hidden");
+
+                other.querySelector("i").classList.remove("rotate-45");
+
+            }
+
+        });
+
+        content.classList.toggle("hidden");
+        icon.classList.toggle("rotate-45");
+
+    });
+
+});
+
+</script>
+
+      <!-- 11 Footer -->
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+<footer class="bg-zinc-950 text-zinc-400">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-20">
+
+        <div class="grid lg:grid-cols-4 gap-14">
+
+            <!-- Brand -->
+
+            <div>
+
+                <h3 class="font-heading text-3xl text-white">
+
+                    AABA
+
+                </h3>
+
+                <p class="mt-6 leading-8">
+
+                    Premium fashion inspired by elegance,
+                    confidence, and everyday sophistication.
+
+                </p>
+
+            </div>
+
+            <!-- Navigation -->
+
+            <div>
+
+                <h4 class="text-white font-semibold mb-6">
+
+                    Navigation
+
+                </h4>
+
+                <div class="space-y-4">
+
+                    <a href="#collections" class="block hover:text-white">
+
+                        Collections
+
+                    </a>
+
+                    <a href="#about" class="block hover:text-white">
+
+                        About
+
+                    </a>
+
+                    <a href="#instagram" class="block hover:text-white">
+
+                        Instagram
+
+                    </a>
+
+                    <a href="#contact" class="block hover:text-white">
+
+                        Contact
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Social -->
+
+            <div>
+
+                <h4 class="text-white font-semibold mb-6">
+
+                    Connect
+
+                </h4>
+
+                <div class="space-y-4">
+
+                    <a
+                        href="https://instagram.com/aaba_elegance"
+                        target="_blank"
+                        class="flex items-center gap-3 hover:text-white">
+
+                        <i class="fab fa-instagram"></i>
+
+                        Instagram
+
+                    </a>
+
+                    <a
+                        href="https://wa.me/919876543210"
+                        target="_blank"
+                        class="flex items-center gap-3 hover:text-white">
+
+                        <i class="fab fa-whatsapp"></i>
+
+                        WhatsApp
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Newsletter -->
+
+            <div>
+
+                <h4 class="text-white font-semibold mb-6">
+
+                    Stay Updated
+
+                </h4>
+
+                <p>
+
+                    Follow us on Instagram for new arrivals,
+                    styling inspiration and exclusive launches.
+
+                </p>
+
+                <a
+                    href="https://instagram.com/aaba_elegance"
+                    target="_blank"
+                    class="inline-block mt-8 bg-white text-black px-6 py-3 rounded-full hover:bg-amber-300 transition">
+
+                    Follow Now
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="border-t border-zinc-800 mt-20 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+
+            <p>
+
+                © 2026 Aaba Elegance. All Rights Reserved.
+
+            </p>
+
+            <p>
+
+                Designed with elegance.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+    <!-- Floating WhatsApp Button -->
+
+    <!-- Back To Top Button -->
+
+    <!-- Global JavaScript (added at the end) -->
+  </body>
+</html>
